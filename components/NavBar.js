@@ -1,0 +1,15 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+export default function NavBar() {
+  const router = useRouter();
+  console.log(router);
+  return <nav>
+    <Link href="/">
+      <a sytle={{color: router.pathname === "/" ? "red" : "blue"}}>Home</a>
+    </Link>
+    <Link href="/about">
+      <a sytle={{color: router.pathname === "/about" ? "red" : "blue"}}>About</a>
+    </Link>
+  </nav>
+  
+}
